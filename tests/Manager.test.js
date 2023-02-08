@@ -1,29 +1,35 @@
-const Employee = require("../lib/Employee")
+const Manager = require("../lib/Manager")
 
-test("Employee position", () => {
-    const employee = new Employee ("JuanCarlos", 28, 'juancarlos@hotmail.com');
-    expect(employee.name).toEqual(expect.any(String));
-    expect(employee.id).toEqual(expect.any(Number));
-    expect(employee.email).toEqual(expecy.any(String));
+test("Manager position", () => {
+    const manager = new Manager ("Aylisa", 28, 'aylisa@hotmail.com', '123-456-7890');
+    expect(manager.name).toEqual(expect.any(String));
+    expect(manager.id).toEqual(expect.any(Number));
+    expect(manager.email).toEqual(expecy.any(String));
+    expect(manager.officeNum).toEqual(expect.any(String));
 
 });
 
 test("get name", () => {
-    const employee = new Employee ("JuanCarlos", 28, 'juancarlos@hotmail.com');
-    expect(employee.getName()).toEqual(expect.any(String));
+    const manager = new Manager ("Aylisa", 28, 'aylisa@hotmail.com', '123-456-7890');
+    expect(manager.getName()).toEqual(expect.any(String));
 });
 
 test("get id", () => {
-    const employee = new Employee ("JuanCarlos", 28, 'juancarlos@hotmail.com');
-    expect(employee.getId()).toEqual(expect.any(Number));
+    const manager = new Manager ("Aylisa", 28, 'aylisa@hotmail.com', '123-456-7890');
+    expect(manager.getId()).toEqual(expect.any(Number));
 });
 
 test("get email", () => {
-    const employee = new Employee ("JuanCarlos", 28, 'juancarlos@hotmail.com');
-    expect(employee.getEmail()).toEqual(expect.any(String));
+    const manager = new Manager ("Aylisa", 28, 'aylisa@hotmail.com', '123-456-7890');
+    expect(manager.getEmail()).toEqual(expect.any(String));
 });
 
 test("get role", () => {
-    const employee = new Employee ("JuanCarlos", 28, 'juancarlos@hotmail.com');
-    expect(employee.getRole).toEqual("Employee");
+    const manager = new Manager ("Aylisa", 28, 'aylisa@hotmail.com', '123-456-7890');
+    expect(manager.getRole).toEqual("Manager");
+});
+
+test("get number", () => {
+    const manager = new Manager ("Aylisa", 28, 'aylisa@hotmail.com', '123-456-7890');
+    expect(manager.getOfficeNumber()).toEqual(expect.any(String));
 });

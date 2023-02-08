@@ -1,6 +1,6 @@
 const Engineer = require("../lib/Engineer")
 
-test("Engineer", () => {
+test("Engineer position", () => {
     const engineer = new Engineer ("Andrew", 26, 'andrew@hotmail.com', 'username');
     expect(engineer.name).toEqual(expect.any(String));
     expect(engineer.id).toEqual(expect.any(Number));
@@ -26,7 +26,7 @@ test("get email", () => {
 
 test("get role", () => {
     const engineer = new Engineer ("Andrew", 26, 'andrew@hotmail.com', 'username');
-    expect(engineer.getRole).toEqual("engineer");
+    expect(engineer.getRole).toEqual("Engineer");
 });
 
 test("get github", () => {
