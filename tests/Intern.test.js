@@ -1,29 +1,35 @@
-const Employee = require("../lib/Employee")
+const Intern = require("../lib/Intern")
 
-test("Employee position", () => {
-    const employee = new Employee ("JuanCarlos", 28, 'juancarlos@hotmail.com');
-    expect(employee.name).toEqual(expect.any(String));
-    expect(employee.id).toEqual(expect.any(Number));
-    expect(employee.email).toEqual(expecy.any(String));
+test("intern position", () => {
+    const intern = new Intern ("Leilani", 5, 'leilani@hotmail.com');
+    expect(intern.name).toEqual(expect.any(String));
+    expect(intern.id).toEqual(expect.any(Number));
+    expect(intern.email).toEqual(expecy.any(String));
+    expect(intern.school).toEqual(expect.any(String));
 
 });
 
 test("get name", () => {
-    const employee = new Employee ("JuanCarlos", 28, 'juancarlos@hotmail.com');
-    expect(employee.getName()).toEqual(expect.any(String));
+    const intern = new Intern ("Leilani", 5, 'leilani@hotmail.com');
+    expect(intern.getName()).toEqual(expect.any(String));
 });
 
 test("get id", () => {
-    const employee = new Employee ("JuanCarlos", 28, 'juancarlos@hotmail.com');
-    expect(employee.getId()).toEqual(expect.any(Number));
+    const intern = new Intern ("Leilani", 5, 'leilani@hotmail.com');
+    expect(intern.getId()).toEqual(expect.any(Number));
 });
 
 test("get email", () => {
-    const employee = new Employee ("JuanCarlos", 28, 'juancarlos@hotmail.com');
-    expect(employee.getEmail()).toEqual(expect.any(String));
+    const intern = new Intern ("Leilani", 5, 'leilani@hotmail.com');
+    expect(intern.getEmail()).toEqual(expect.any(String));
 });
 
 test("get role", () => {
-    const employee = new Employee ("JuanCarlos", 28, 'juancarlos@hotmail.com');
-    expect(employee.getRole).toEqual("Employee");
+    const intern = new Intern ("Leilani", 5, 'leilani@hotmail.com');
+    expect(intern.getRole).toEqual("intern");
+});
+
+test("get school", () => {
+    const intern = new Intern ("Leilani", 5, 'leilani@hotmail.com');
+    expect(intern.getSchool()).toEqual(expect.any(String));
 });
