@@ -37,7 +37,7 @@ function generateManager(manager) {
       <h5 class="card-title"> ${manager.name} </h5>
          <h6 class="card-subtitle mb-2 text-muted">${manager.getRole()}</h6>
             <p class="card-text">ID: ${manager.id}</p>
-            <p class="card-text">Office Phone: ${manager.officeNumber}</p>
+            <p class="card-text">Office Number: ${manager.officeNum}</p>
             <p class="card-text">Email: <a href="mailto:${manager.email}" class="card-link">${manager.email}</a></p>                   
      </div>
     </div>
@@ -73,8 +73,8 @@ function generateManager(manager) {
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
         </head>
         <body>
-        <nav class="navbar navbar-light" style="background-color: #FF0000" stylejustify-content-center>
-        <h1 class="navbar-brand" style="font-size: 40px;">Team A</h1>
+        <nav class="navbar navbar-dark bg-danger justify-content-center">
+        <h1 class="navbar-brand" style="font-size: 40px;" justify-content-center>Team A</h1>
        </nav>
         <div class="container mt-2">
           <div class="row row-cols-1 row-cols-sm-3 g-4">
@@ -84,7 +84,4 @@ function generateManager(manager) {
         </body>
     </html>`
  }
-
- 
-
  module.exports = generateHTML

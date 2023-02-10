@@ -5,28 +5,30 @@ const Employee = require('./lib/Employee');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
+const { choices } = require('yargs');
+const { throwStatement } = require('@babel/types');
 const teamArray = [];
 const getManager = () => {
     return inquirer.prompt([
         {
          type: 'input',
          name: 'name',
-         message: 'Enter name of team Manager'
+         message: 'Input managers name'
         },
         {
          type: 'input',
          name: 'id',
-         message: 'Please enter Manager ID'
+         message: 'Input managers ID'
         },
         {
          type: 'input',
          name: 'email',
-         message: 'Please enter managers email'
+         message: 'Input managers email'
         },
         {
          type: 'input',
          name: 'officeNumber',
-         message: 'Please enter managers office phone number'
+         message: 'Input managers office number'
         }
     ])
         .then((managerInput) => {
@@ -55,7 +57,7 @@ const getEmployee = () => {
            return getIntern();
           case 'No More Employees':
            return fs.writeFile('./dist/index.html', generateHTML(teamArray), (err) =>
-            err ? console.log(err) : console.log('Successfully created index.html!')
+            err ? console.log(err) : console.log('index.html created')
          );
         }
     })
@@ -68,22 +70,22 @@ const getEngineer = () => {
         {
          type: 'input',
          name: 'name',
-         message: 'Please enter employee name'
+         message: 'Input engineers name'
         },
         {
          type: 'input',
          name: 'id',
-         message: 'Please enter their employee ID'
+         message: 'Input engineers ID'
         },
         {
          type: 'input',
          name: 'email',
-         message: 'Please enter their email'
+         message: 'Input engineers email'
         },
         {
          type: 'input',
          name: 'github',
-         message: 'Please enter employee github username',
+         message: 'Input engineers github',
         },
     ])
         .then((engineerInput) => {
@@ -100,22 +102,22 @@ const getIntern = () => {
         {
          type: 'input',
          name: 'name',
-         message: 'Please enter employee name'
+         message: 'Input interns name'
         },
         {
          type: 'input',
          name: 'id',
-         message: 'Please enter their employee ID'
+         message: 'Input interns employee ID'
         },
         {
          type: 'input',
          name: 'email',
-         message: 'Please enter their email'
+         message: 'Input interns email'
         },
         {
          type: 'input',
          name: 'school',
-         message: "Enter the school the intern attends",
+         message: 'Input interns school',
         },
     ])
         .then((internInput) => {
